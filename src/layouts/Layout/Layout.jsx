@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import { Outlet } from 'react-router-dom'
-function AuthLayout() {
+function Layout() {
   return (
     <>
         <Header/>
@@ -12,4 +12,4 @@ function AuthLayout() {
   )
 }
 
-export default AuthLayout
+export default Layout
