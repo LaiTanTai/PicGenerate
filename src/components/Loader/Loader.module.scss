@@ -1,0 +1,39 @@
+.bgOut {
+    background-color:rgb(4 11 53);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 10px;
+}
+.bgIn1 {
+    background-color: #d027aa;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: Loading 1s infinite;
+}
+.bgIn2 {
+    background-color: #d027aa;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: Loading 1s  0.33s  infinite;
+}
+.bgIn3 {
+    background-color: #d027aa;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: Loading 1s 0.6s infinite;
+}
+@keyframes Loading {
+    0% , 100%{
+        width:20px;
+        height: 20px;
+    }
+    50%{
+        width:30px;
+        height: 30px;
+    }
+}
