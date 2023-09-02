@@ -1,0 +1,62 @@
+.Ideas{
+    display: flex;
+    padding: 80px 150px 20px 150px;
+    background-color: rgb(4 11 53);
+    justify-content: center;
+    align-items: center;
+}
+.Ideas_text{
+    width: 50%;
+}
+.Ideas_text_h1{
+    background-image: linear-gradient(to right,#6c79f1,#f30b92);
+    background-clip: text;
+    color:transparent;
+}
+.Ideas_text_p{
+    color: white;
+    font-size: 20px;
+}
+.Ideas_text_generate_button{
+    display: flex;
+    background-color: rgb(25 119 242);
+    color: white;
+    width: 200px;
+    height: 50px;
+    border:0;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.Ideas_image_video{
+    width: 50%;
+    height: 600px;
+}
+.Ideas_video_1{
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+.Ideas_video_camera{
+    position: absolute;
+    top: 130px;
+    left: 130px;
+}
+.Ideas_image_1{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 30px;
+    right: 0;
+}
+.Ideas_image_2{
+    position: absolute;
+    width: 550px;
+    height: 225px;
+    bottom: 0;
+    right: 0;
+}
