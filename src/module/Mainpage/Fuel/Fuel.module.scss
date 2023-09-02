@@ -1,0 +1,32 @@
+.Fuel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 180px 50px 150px;
+}
+.Fuel_text_h1{
+    font-size: 40px;
+    font-weight: 500;
+}
+.Fuel_text_p1{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.Fuel_button{
+    margin-top: 50px;
+    display: flex;
+    background-color: rgb(25 119 242);
+    color: white;
+    width: 180px;
+    height: 70px;
+    border:0;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+}
+.Fuel_button:hover{
+    background-color:rgb(14, 75, 155) ;
+}
