@@ -2,7 +2,7 @@
     display:flex;
     align-items: center;
     height: 75px;
-    padding:10px 20px 10px 20px;
+    padding:10px 50px 10px 50px;
     background-color: rgb(4 11 53);
 }
 .Explore{
@@ -16,4 +16,15 @@
 }
 .Explore:hover{
     color: white;
+}
+.SignUp{
+    background-image: linear-gradient(to bottom , #6c79f1,#f30b92);
+    margin-left:auto;
+    border:0px;
+    width:150px;
+    height:45px;
+    font-size: 17px;
+    color: white;
+    border-radius: 30px;
+    font-weight: 700;
 }

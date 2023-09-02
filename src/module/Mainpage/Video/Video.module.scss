@@ -1,0 +1,48 @@
+.Video{
+    background-color: rgb(4 11 53);
+    display: flex;
+    padding: 80px 150px 80px 200px;
+    justify-content: center;
+}
+.video_text_h1{
+    font-weight: 500;
+    background-image: linear-gradient(to right,#6c79f1,#f30b92);
+    background-clip: text;
+    color: transparent;
+}
+.video_text_p{
+    color: white;
+    font-size: 20px;
+}
+.video_text_generate_button{
+    display: flex;
+    background-color: rgb(25 119 242);
+    color: white;
+    width: 200px;
+    height: 50px;
+    border:0;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+}
+.video_hidden{
+    position: relative;
+    width: 70px;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+.video_source{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+}
+.video_hidden:hover{
+    width: 280px;
+}
+
