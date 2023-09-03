@@ -5,6 +5,7 @@ import Video from './Video/Video'
 import Insprite from './Insprite/Insprite'
 import Deal from './Deal/Deal'
 import Fuel from './Fuel/Fuel'
+import Magic from './Magic/Magic'
 import Showcase from './Showcase/Showcase'
 import Creativity from './Creativity/Creativity'
 function Main() {
@@ -18,6 +19,7 @@ function Main() {
       <Fuel/>
       <Showcase/>
       <Creativity/>
+      <Magic/>
     </>
   )
 }
