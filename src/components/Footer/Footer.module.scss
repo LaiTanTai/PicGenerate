@@ -1,5 +1,18 @@
 .Footer{
     display: flex;
     background-color: rgb(4 11 53);
+    justify-content: space-around;
     padding: 50px 200px 30px 200px;
+}
+.Footer_contact{
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+.Footer_contact_ul{
+    text-decoration: none;
+    list-style: none;
+}
+.Footer_contact_li{
+    margin: 30px 20px 30px 0px;
 }

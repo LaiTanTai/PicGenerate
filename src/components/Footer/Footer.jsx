@@ -15,6 +15,19 @@ function Footer() {
           </div>
           <p style={{color:'white'}}>© 2023 Gencraft | All rights reserved</p>
         </div>
+        <div className={styles.Footer_contact}>
+          <ul className={styles.Footer_contact_ul}>
+            <li className={styles.Footer_contact_li}>Information</li>
+            <li className={styles.Footer_contact_li}>FAQ</li>
+            <li className={styles.Footer_contact_li}>Term of Use</li>
+            <li className={styles.Footer_contact_li}>Privacy Policy</li>
+            <li className={styles.Footer_contact_li}>Content Policy</li>
+          </ul>
+          <ul className={styles.Footer_contact_ul}>
+            <li className={styles.Footer_contact_li}>Contact Us</li>
+            <li className={styles.Footer_contact_li}>support@gencraft.com</li>
+          </ul>
+        </div>
     </div>
   )
 }
