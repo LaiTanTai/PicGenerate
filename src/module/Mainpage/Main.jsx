@@ -5,6 +5,8 @@ import Video from './Video/Video'
 import Ideas from './Ideas/Ideas'
 import Insprite from './Insprite/Insprite'
 import Fuel from './Fuel/Fuel'
+import Showcase from './Showcase/Showcase'
+import Creativity from './Creativity/Creativity'
 function Main() {
   return (
     <>
@@ -14,6 +16,8 @@ function Main() {
       <Ideas/>
       <Insprite/>
       <Fuel/>
+      <Showcase/>
+      <Creativity/>
     </>
   )
 }

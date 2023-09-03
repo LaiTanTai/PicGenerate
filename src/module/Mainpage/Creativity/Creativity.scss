@@ -1,0 +1,31 @@
+.Creativity_text{
+    text-align: center;
+    padding: 0px 425px 0px 425px;
+}
+.swipe{
+    display: flex;
+    width: max-content;
+    height: 550px;
+    gap: 50px;
+    position: absolute;
+    animation: trans 50s linear infinite;
+}
+.Creativity_images{
+    width: 100%;
+}
+.images{
+    width: 550px;
+    height: 550px;
+}
+.imageswhite{
+    width: 100px;
+    height: 550px;
+}
+@keyframes trans {
+    0%{
+        right: -5985px;
+    }
+    100%{
+        right: 0px;
+    }
+}
