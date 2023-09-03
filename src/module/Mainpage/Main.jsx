@@ -3,7 +3,7 @@ import Introduce from './Introduce/Introduce'
 import Picture from './Picture/Picture'
 import Video from './Video/Video'
 import Insprite from './Insprite/Insprite'
-import Ideas from './Ideas/Ideas'
+import Deal from './Deal/Deal'
 import Fuel from './Fuel/Fuel'
 import Showcase from './Showcase/Showcase'
 import Creativity from './Creativity/Creativity'
@@ -13,7 +13,7 @@ function Main() {
       <Introduce/>
       <Picture/>
       <Video/>
-      <Ideas/>
+      <Deal/>
       <Insprite/>
       <Fuel/>
       <Showcase/>

@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from './Ideas.module.scss'
-function Ideas() {
+import styles from './Deal.module.scss'
+function Deal() {
   return (
     <div className={styles.Ideas}>
         <div className={styles.Ideas_text}>
@@ -23,4 +23,4 @@ function Ideas() {
   )
 }
 
-export default Ideas
+export default Deal
