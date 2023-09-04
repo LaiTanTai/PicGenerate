@@ -8,6 +8,7 @@ import Fuel from './Fuel/Fuel'
 import Magic from './Magic/Magic'
 import Showcase from './Showcase/Showcase'
 import Creativity from './Creativity/Creativity'
+import Footer from '../../components/Footer/Footer'
 function Main() {
   return (
     <>
@@ -20,6 +21,7 @@ function Main() {
       <Showcase/>
       <Creativity/>
       <Magic/>
+      <Footer/>
     </>
   )
 }
