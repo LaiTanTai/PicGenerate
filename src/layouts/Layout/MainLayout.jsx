@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import HeaderMain from '../../components/HeaderMain/HeaderMain'
-import { useNavigate } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 function MainLayout() {
   const navigate = useNavigate()
   useEffect(()=>{
@@ -11,8 +11,8 @@ function MainLayout() {
   },[()=>(console.log("checkUser"))])
   return (
         <div style={{position:'relative'}}>
-            {console.log('render')}
             <HeaderMain/>
+            <Outlet/>
         </div>
 
   )

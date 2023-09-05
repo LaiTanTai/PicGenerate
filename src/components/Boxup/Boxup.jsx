@@ -15,12 +15,12 @@ function Boxup() {
   const handleChangePassword = (event)=>{
     setPassword(event.target.value)
   }
-  const handleSubmit = ()=>{
+  const handleSubmit = async()=>{
     const user = {
       username : username,
       password : password,
     }
-    dispatch(GetUser(user))
+    await dispatch(GetUser(user))
     dispatch(Open())
     navigate('/generate')
   }
