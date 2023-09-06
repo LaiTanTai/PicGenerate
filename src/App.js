@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react'
 import Loader from './components/Loader/Loader'
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
+const Creation = lazy(()=>import('./module/Creation/Creation'))
 const MainLayout = lazy(()=> import('./layouts/Layout/MainLayout'))
 const Layout = lazy(()=>import('./layouts/Layout/Layout'))
 const Explore = lazy(()=>import('./module/Explore/Explore'))
@@ -18,6 +19,7 @@ function App() {
               <Route path='/generate' element={<MainLayout/>}>
                 <Route path='/generate' element={<Generate/>}/>
                 <Route path='/generate/Explore' element={<Explore/>}/>
+                <Route path='/generate/Creation' element={<Creation/>}/>
               </Route>
             </Routes>
           </BrowserRouter>
