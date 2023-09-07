@@ -1,13 +1,14 @@
 import React,{useState} from 'react';
 import styles from './Generate.module.scss';
+import axios from 'axios';
 import deepai from 'deepai';
-import cloudinary from './../../api/Cloudinary'
 import { useSelector,useDispatch } from 'react-redux';
 import { UpdateImage } from '../../api/ImageAPI';
 import WhiteLoader from '../../components/WhiteLoader/WhiteLoader';
 deepai.setApiKey('48c41f66-7919-4da0-a9b6-9f4f2da1cf15')
 function Generate() {
   const [isLoading,setIsLoading] = useState(false)
+  const clientId = '9f576559c174673'
   const dispatch = useDispatch()
   const {user} = useSelector(state=>state.User)
   const [textImage,setTextImage] = useState('')
@@ -22,8 +23,7 @@ function Generate() {
         const response = await deepai.callStandardApi("text2img",{
             text:textImage
         })
-        const imageurl = response.output_url; // Thay URL_hinh_anh bằng URL của hình ảnh bạn muốn tải về
-        setImageUrl(response.output_url)
+        setImageUrl(response.output_url); // Thay URL_hinh_anh bằng URL của hình ảnh bạn muốn tải về
         await UpdateImage(imageUrl,user,dispatch)
         setIsLoading(false)
     } catch (error) {
@@ -73,20 +73,6 @@ function Generate() {
           </div>
       </div>
       }
-      <div className={styles.Generate_history}>
-          {
-            user.images.map((value,index)=>{
-                if(index <= 6){
-                  return  (
-                    <div style={{width:'50px',height:'50px'}}>
-                      <img src={value} style={{width:'100%'}}/>
-                      <br/>
-                    </div>
-                  )
-                }
-            })
-          }
-      </div>
     </div>
   );
 }
