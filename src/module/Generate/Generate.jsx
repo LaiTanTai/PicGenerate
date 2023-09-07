@@ -47,12 +47,14 @@ function Generate() {
                   outline: 'none', // Loại bỏ border mặc định
                   boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)', // Tạo border mờ
                   padding: '10px',
-                  resize: 'none', // Thêm padding cho phần nội dung
+                  resize: 'none',
+                  width:'95%', // Thêm padding cho phần nội dung
                 }}
                 placeholder="A white bird flying over a volcano"
                 onChange={handleChange}
-                rows={8} // Số hàng của textarea
-                cols={50} // Số cột của textarea
+                rows={8}
+              // Số hàng của textarea
+                 // Số cột của textarea
               />
               {isLoading ? <WhiteLoader/>:<button className={styles.Generate_left_buttongen} disabled={textImage ? false : true} onClick={generateImage}><img src='./img/star.svg' alt='star'/>GENERATE</button>}
             </div>
