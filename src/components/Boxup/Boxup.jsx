@@ -55,14 +55,14 @@ images, and videos. Gencraft brings your ideas to life.</p>
         <label style={{fontWeight:'800'}}>
           USERNAME<br/>
           <input type='text' onChange={handlechangeUsername} className={styles.Boxup_input} placeholder='Username'/><br/>
-          {IslackUsername ? <p style={{color:'red',fontWeight:'600',margin:'0px 0px 0px 0px',fontSize:'10px'}}>username không được để trống</p>:''}
+          {IslackUsername ? <p style={{color:'red',fontWeight:'600',margin:'0px 0px 0px 0px',fontSize:'10px'}}>username should'nt be empty</p>:''}
         </label>  
         <label style={{fontWeight:'800'}}>
         PASSWORD<br/>
           <input type='password' onChange={handleChangePassword} className={styles.Boxup_input} placeholder='Password'/>
         </label><br/>
-        {IsLackPassword ? <p style={{color:'red',fontWeight:'600',margin:'0px 0px 0px 0px',fontSize:'10px'}}>password không được để trống</p>:''}
-        {IsNullUser ? <p style={{color:'red',fontWeight:'600',margin:'0px 0px 0px 0px',fontSize:'15px'}}>User không tồn tại</p>:''}
+        {IsLackPassword ? <p style={{color:'red',fontWeight:'600',margin:'0px 0px 0px 0px',fontSize:'10px'}}>password should'nt be empty</p>:''}
+        {IsNullUser ? <p style={{color:'red',fontWeight:'600',margin:'0px 0px 0px 0px',fontSize:'15px'}}>Could'nt find any user</p>:''}
           <button onClick={handleSubmit} className={styles.Boxup_buttonSignin}>Sign In</button><br/>
           <p style={{marginTop:'0px',marginBottom:'0px'}}>or</p>
           <button onClick={()=>navigate('/Register')} className={styles.Boxup_buttonSignin}>Register</button>
