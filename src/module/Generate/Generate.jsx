@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import styles from './Generate.module.scss';
-import axios from 'axios';
 import deepai from 'deepai';
 import { useSelector,useDispatch } from 'react-redux';
 import { UpdateImage } from '../../api/ImageAPI';

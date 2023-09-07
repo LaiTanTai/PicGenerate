@@ -34,8 +34,8 @@
     cursor: pointer;
 }
 .Boxup_buttonSignin{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     width: 200px;
     height: 45px;
     border-radius: 20px;
@@ -45,14 +45,18 @@
     cursor: pointer;
 }
 .Boxup_text_h1{
+    margin:5px 0px 5px 0px;
     font-size: 35px;
     font-weight: 600;
 }
 .Boxup_text_p{
+    margin:3px 0px 3px 0px;
     font-size: 20px;
 }
 .Boxup_input{
     width: 200px;
     height: 30px;
-    border-radius: 20px;
+    border-radius: 10px;
+    background-color: white;
+    border: #6c79f1 2px solid ;
 }
