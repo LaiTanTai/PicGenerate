@@ -23,7 +23,6 @@ function Generate() {
             text:textImage
         })
         setImageUrl(response.output_url); // Thay URL_hinh_anh bằng URL của hình ảnh bạn muốn tải về
-        await UpdateImage(imageUrl,user,dispatch)
         setIsLoading(false)
     } catch (error) {
         console.log('lỗi',error)
