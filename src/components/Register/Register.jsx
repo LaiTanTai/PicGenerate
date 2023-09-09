@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import styles from './Register.module.scss'
+import { PostUser } from '../../api/MockAPI'
+import { useNavigate } from 'react-router-dom'
 function Register() {
+  const navigate = useNavigate()
+  const [valueButton,setValueButton] = useState(false)
   const [Username,setUsername] = useState('')
   const [Password,setPassword] = useState('')
   const handleChangeUser = (event)=>{
@@ -9,8 +13,16 @@ function Register() {
   const handlePassword = (event)=>{
     setPassword(event.target.value)
   }
-  const handleSubmit = ()=>{
-
+  const handleSubmit = async ()=>{
+    setValueButton(true)
+    const user = {
+      username:Username,
+      password:Password,
+      images:[],
+      avatar:"",
+    }
+    await PostUser(user)
+    navigate('/')
   }
   return (
     <div className={styles.Register}>
@@ -25,7 +37,7 @@ function Register() {
             <p style={{fontWeight:'700'}}>Password</p>
             <input onChange={handlePassword} className={styles.Register_input} placeholder='Password'/>
           </div>
-          <button onClick={()=>handleSubmit} style={{width:'90%',height:'50px',marginTop:'30px',borderRadius:'10px',border:'0',backgroundColor:'#6c79f1',fontWeight:'700'}}>Register</button>
+          <button onClick={handleSubmit} disabled={valueButton} style={{width:'90%',height:'50px',marginTop:'30px',borderRadius:'10px',border:'0',backgroundColor:'#6c79f1',fontWeight:'700'}}>Register</button>
         </div>
       </div>
     </div>

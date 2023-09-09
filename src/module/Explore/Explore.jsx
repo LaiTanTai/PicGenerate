@@ -1,12 +1,12 @@
 import React,{useEffect, useState} from 'react'
 import styles from './Explore.module.scss'
 import { getAllImage } from '../../api/MockAPI'
-import { image } from '@cloudinary/url-gen/qualifiers/source'
 function Explore() {
   const [Post,setPost]= useState(true)
   const [User,setUser] = useState(false)
   const [allUser,setAllUser] = useState([])
   const [menu,setMenu] = useState(1)
+  const [usermenu,setUsermenu] = useState(1)
   const handlePost = ()=>{
     setPost(true)
     setUser(false)
@@ -15,7 +15,6 @@ function Explore() {
     const arrLength = allUser.map((value)=>{
       
       return (
-        
         value.images.length
       )
     })
@@ -32,7 +31,7 @@ function Explore() {
     return(
         numArray.map((value)=>{
           return (
-            <button onClick={()=>setMenu(value)}>{value}</button>
+            <button onClick={()=>setMenu(value)} className={styles.Menu}>{value}</button>
           )
         })
     )
@@ -53,6 +52,20 @@ function Explore() {
         }
       })
     )
+  }
+  const handleUserMenu = ()=>{
+    const num = Math.floor(allUser.length/6)
+    let numArray = [];
+    for(let i = 0 ; i <= num;i++){
+      numArray.push(i+1)
+    }
+    return(
+      numArray.map((value)=>{
+        return (
+          <button onClick={()=>setUsermenu(value)} className={styles.Menu}>{value}</button>
+        )
+      })
+  )
   }
   const handleUser = ()=>{
     setPost(false)
@@ -77,15 +90,43 @@ function Explore() {
       <hr style={{margin:"0"}}/>
       <div style={{marginTop:'50px'}}>
         {
-          Post ? handleImageNav()
-          : allUser.map((value)=>{
-            return (
-              <p>{value.username}</p>
-            )
-          })
+          Post ? 
+          <div>
+            {handleImageNav()}
+            <div>{handleImageMenu()}</div>
+          </div>
+          : 
+        <div>
+          <div style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
+            <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'10px'}}>
+              {allUser.map((value,index)=>{
+                if(index >= (usermenu-1)*6 && index<=6*usermenu - 1){
+                  return <div style={{backgroundColor:'rgb(240 243 248)',height:'fit-content',borderRadius:'5px'}}>
+                        <div style={{display:'flex',height:'50%',alignItems:'center'}}>
+                            <div style={{backgroundColor:'rgb(41 68 103)',width:"60px",height:'60px',fontSize:'40px',borderRadius:'50%',color:'white'}}>{value.username.charAt(0)}</div>
+                            <h2 style={{marginLeft:'10px',fontWeight:'500',fontSize:'20px'}}>{value.username}</h2>
+                        </div>
+                        <div style={{width:'100%'}}>
+                          {value.images[0] ? value.images.map((image,index)=>{
+                              if(index < 3){
+                                return(
+                                  <img src={image} style={{width:'150px'}}/>
+                                )
+                              }
+                          })
+                          :
+                          <h3>Images aren't available</h3>
+                          }
+                        </div>
+                  </div>
+                }
+              })}
+            </div>
+          </div> 
+          <div>{handleUserMenu()}</div>
+        </div>
         }
       </div>
-      {handleImageMenu()}
     </div>
   )
 }
