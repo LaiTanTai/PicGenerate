@@ -1,20 +1,21 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import styles from './Generate.module.scss';
 import deepai from 'deepai';
-import { useSelector,useDispatch } from 'react-redux';
-import { UpdateImage } from '../../api/ImageAPI';
 import WhiteLoader from '../../components/WhiteLoader/WhiteLoader';
+import { CloudinaryUpload } from '../../api/Cloudinary';
+import { useDispatch,useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { UpdateImage } from '../../api/ImageAPI';
 deepai.setApiKey('48c41f66-7919-4da0-a9b6-9f4f2da1cf15')
 function Generate() {
   const [isLoading,setIsLoading] = useState(false)
-  const clientId = '9f576559c174673'
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
   const {user} = useSelector(state=>state.User)
   const [textImage,setTextImage] = useState('')
   const [imageUrl,setImageUrl] = useState('')
   const handleChange = (event)=>{
     setTextImage(event.target.value)
-    console.log(textImage)
   }
   const generateImage = async () => {
     setIsLoading(true)
@@ -23,11 +24,21 @@ function Generate() {
             text:textImage
         })
         setImageUrl(response.output_url); // Thay URL_hinh_anh bằng URL của hình ảnh bạn muốn tải về
+        console.log(response.output_url)
         setIsLoading(false)
+        const data = await CloudinaryUpload(response.output_url,user,dispatch)
+        await UpdateImage(data.data.secure_url,user,dispatch)
     } catch (error) {
         console.log('lỗi',error)
     }
   };
+  
+  useEffect(()=>{
+    const User = localStorage.getItem('user')
+    if(!User){
+      navigate('/')
+    }
+  },[()=>(console.log("checkUser"))])
   return (
     <div className={styles.Generate}>
       <div className={styles.Generate_left}>
@@ -73,6 +84,15 @@ function Generate() {
           </div>
       </div>
       }
+      <div className={styles.Generate_history}>
+          {
+            user.images.map((image,index)=>{
+              if(index <= 6){
+                return <img src={image} className={styles.Generate_history_image}/>
+              }
+            })
+          }
+      </div>
     </div>
   );
 }

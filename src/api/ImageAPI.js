@@ -1,4 +1,5 @@
 import axios from "axios"
+import { signin } from "../Redux/slice/Userslice"
 import { GetUser } from "../Redux/slice/Userslice"
 export const UpdateImage = async(link,user,dispatch)=>{
     console.log(link)
@@ -14,5 +15,6 @@ export const UpdateImage = async(link,user,dispatch)=>{
         username : user.username,
         password : user.password
     }
-    await dispatch(GetUser(User))
+    const data = await GetUser(User)
+    dispatch(signin(data))
 }

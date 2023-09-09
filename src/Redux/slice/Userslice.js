@@ -16,6 +16,7 @@ const UserSlice = createSlice({
     },
     reducers:{
         signin : (state,action)=>{
+            console.log(action)
             localStorage.setItem('user',JSON.stringify(action.payload))
             state.user = action.payload
         }

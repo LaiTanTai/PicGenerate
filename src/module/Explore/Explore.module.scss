@@ -1,0 +1,39 @@
+.Explore{
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+}
+.title{
+    color: rgb(41 68 103);
+    font-weight: 600;
+    font-size: 40px;
+}
+.Post_User_div{
+    display: flex;
+    justify-content: center;
+}
+.Post_User{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(41 68 103);
+    background-color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0px 20px 10px 20px;
+}
+.Post_User_true{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(41 68 103);
+    background-color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0px 20px 10px 20px;
+    border-bottom: rgb(41 68 103) 2px solid;
+}

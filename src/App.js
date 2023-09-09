@@ -16,11 +16,11 @@ function App() {
               <Route path='/Register' element={<Register/>}/>
               <Route path='/' element={<Layout/>}>
                 <Route path='/' element={<Mainpage/>}/>
-                <Route path='/explore' element={<Explore/>}/>
+                <Route path='/Explore' element={<Explore/>}/>
               </Route>
               <Route path='/generate' element={<MainLayout/>}>
                 <Route path='/generate' element={<Generate/>}/>
-                <Route path='/generate/Explore' element={<Explore/>}/>
+                <Route path='/generate/explore' element={<Explore/>}/>
                 <Route path='/generate/Creation' element={<Creation/>}/>
               </Route>
             </Routes>

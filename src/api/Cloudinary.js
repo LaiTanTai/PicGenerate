@@ -1,8 +1,9 @@
-import {v2 as cloudinary} from 'cloudinary';
-          
-cloudinary.config({ 
-  cloud_name: 'dj219rk3m', 
-  api_key: '866498853116259', 
-  api_secret: 'cuAUPbeCDIzF3FXFiMMeS-J01sQ' 
-})
-module.exports = cloudinary
+import axios from "axios";
+export const CloudinaryUpload = async (url)=>{
+  const cloudName = "dj219rk3m"
+  const data = new FormData()
+  data.append("file", url)
+  data.append("upload_preset", "js5lrh6s")
+  const result = await axios.post(`https://api.cloudinary.com/v1_1/${cloudName}/upload`, data)
+  return result
+}
