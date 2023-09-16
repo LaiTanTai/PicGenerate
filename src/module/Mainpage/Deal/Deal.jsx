@@ -10,7 +10,7 @@ function Deal() {
         </div>
         <div className={styles.Ideas_image_video}>
           <div style={{position:'relative',height:'100%'}}>
-          <video className={styles.Ideas_video_1} width='150px' height='150px' autoPlay loop>
+          <video className={styles.Ideas_video_1} width='26%' height='26%' autoPlay loop>
             <source src='./video/video4.mp4' type='video/mp4'/>
             
           </video>

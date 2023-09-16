@@ -17,3 +17,50 @@
     border: 0;
     cursor: pointer;
 }
+.introduce_texttitle{
+    padding: 0px 70px 0px 70px;
+    margin-top: 75px;
+    display: block;
+}
+.introduce_texttitle2{
+    display: none;
+}
+.introduce_texth1{
+    background-image: linear-gradient(to right,#6c79f1,#f30b92);
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+}
+.introduce_textp{
+    color: white;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width:1440px) {
+    .introduce_texttitle{
+        display: none;
+    }
+    .introduce_texttitle2{
+        align-items: center;
+        text-align: center;
+        margin-top: 75px;
+        padding: 0px 120px 0px 120px;
+        display: block;
+    }
+}
+@media screen and (max-width:980px) {
+    .introduce{
+        padding: 20px 50px 20px 50px ;
+    }
+    .introduce_texttitle{
+        display: none;
+    }
+    .introduce_texttitle2{
+        align-items: center;
+        text-align: center;
+        margin-top: 75px;
+        padding: 0px 0px 0px 0px;
+        display: block;
+    }
+}
