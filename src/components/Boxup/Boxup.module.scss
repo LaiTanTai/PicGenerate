@@ -86,3 +86,29 @@
         border: #6c79f1 2px solid ;
     }
 }
+@media screen and (max-width:560px) {
+    .BoxupIn{
+        position: relative;
+        width:300px;
+        margin:auto;
+        background-color: white;  
+        text-align: center;
+        border-radius: 20px;
+    }
+    .Boxup_text_h1{
+        margin:5px 0px 5px 0px;
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .Boxup_text_p{
+        margin:3px 0px 3px 0px;
+        font-size: 15px;
+    }
+    .Boxup_input{
+        width: 200px;
+        height: 30px;
+        border-radius: 10px;
+        background-color: white;
+        border: #6c79f1 2px solid ;
+    }
+}
