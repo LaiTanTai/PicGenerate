@@ -100,4 +100,12 @@
         width:100%;
         z-index: 10;
     }
+    .navbar{
+        display:flex;
+        align-items: center;
+        height: 75px;
+        padding:10px 2px 10px 2px;
+        background-color: rgb(4 11 53);
+        z-index: 10;
+    }
 }
