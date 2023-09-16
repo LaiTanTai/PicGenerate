@@ -4,6 +4,9 @@
     align-items: center;
     padding: 50px 180px 50px 150px;
 }
+.Fuel2{
+    display: none;
+}
 .Fuel_text_h1{
     font-size: 40px;
     font-weight: 500;
@@ -29,4 +32,38 @@
 }
 .Fuel_button:hover{
     background-color:rgb(14, 75, 155) ;
+}
+.Fuel_Text{
+    width: 50%;
+}
+.Fuel_Image{
+    width: 50%;
+}
+@media screen and (max-width:1000px) {
+    .Fuel{
+        display: none;
+    }
+    .Fuel2{
+        display: block;
+        text-align: center;
+        padding: 50px 50px 50px 50px ;
+    }
+    .Fuel_text_h1{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .Fuel_text_p1{
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+    .Fuel_Text{
+        width: 100%;
+    }
+    .Fuel_Image{
+        width: 100%;
+    }
+    .Fuel_button{
+        display: none;
+    }
 }

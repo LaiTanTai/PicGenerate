@@ -8,10 +8,34 @@
     height: 550px;
     gap: 50px;
     position: absolute;
-    animation: trans 50s linear infinite;
+    animation: trans1 50s linear infinite;
 }
 .Creativity_images{
     width: 100%;
+}
+.Creativity_whiteOut{
+    position: relative;
+    overflow: hidden;
+}
+.Creativity_whiteIntop{
+    width: 100vw;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    background-color: white;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    z-index: 6;
+}
+.Creativity_whiteInbottom{
+    width: 100vw;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    z-index: 6;
 }
 .images{
     width: 550px;
@@ -21,11 +45,124 @@
     width: 100px;
     height: 550px;
 }
-@keyframes trans {
+.Creativity_Height{
+    position: relative;
+    height: 550px;
+}
+@keyframes trans1 {
     0%{
         right: -5983px;
     }
     100%{
         right: 0px;
+    }
+}
+@keyframes trans2 {
+    0%{
+        right: -3500px;
+    }
+    100%{
+        right: 0px;
+    }
+}
+@keyframes trans3 {
+    0%{
+        right: -3100px;
+    }
+    100%{
+        right: 0px;
+    }
+}
+@media screen and (max-width:1200px) {
+    .Creativity_Height{
+        position: relative;
+        height: 300px;
+    }
+    .Creativity_text{
+        text-align: center;
+        padding: 0px 200px 0px 200px;
+    }
+    .images{
+        width: 300px;
+        height: 300px;
+    }
+    .swipe{
+        display: flex;
+        width: max-content;
+        height: 300px;
+        gap: 50px;
+        position: absolute;
+        animation: trans2 30s linear infinite;
+    }
+    .Creativity_whiteIntop{
+        width: 100vw;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        background-color: white;
+        border-bottom-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+        z-index: 6;
+    }
+    .Creativity_whiteInbottom{
+        width: 100vw;
+        height: 50px;
+        position: absolute;
+        bottom: 0;
+        background-color: white;
+        border-top-left-radius: 100%;
+        border-top-right-radius: 100%;
+        z-index: 6;
+    }
+}
+@media screen and (max-width:800px) {
+    .Creativity_text{
+        text-align: center;
+        padding: 0px 40px 0px 40px;
+    }
+    .Creativity_text_h1{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .Creativity_text_p{
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+    .Creativity_Height{
+        position: relative;
+        height: 300px;
+    }
+    .images{
+        width: 300px;
+        height: 300px;
+    }
+    .swipe{
+        display: flex;
+        width: max-content;
+        height: 300px;
+        gap: 50px;
+        position: absolute;
+        animation: trans2 30s linear infinite;
+    }
+    .Creativity_whiteIntop{
+        width: 100vw;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        background-color: white;
+        border-bottom-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+        z-index: 6;
+    }
+    .Creativity_whiteInbottom{
+        width: 100vw;
+        height: 30px;
+        position: absolute;
+        bottom: 0;
+        background-color: white;
+        border-top-left-radius: 100%;
+        border-top-right-radius: 100%;
+        z-index: 6;
     }
 }

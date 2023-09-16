@@ -7,9 +7,9 @@ function Creativity() {
             <h1 className='Creativity_text_h1'>Use Styles to elevate your creativity.</h1>   
             <p className='Creativity_text_p'>Pair your text prompt with a Style for more personalized results. Our growing list of Styles cover many visual categories, such as art, fashion, video games, and much more.</p>
         </div>
-        <div style={{position:'relative',overflow:'hidden'}}>
-            <div style={{width:'100vw',height:'80px',position:'absolute',top:'0',backgroundColor:'white',borderBottomLeftRadius:'100%',borderBottomRightRadius:'100%',zIndex:'6'}}></div>
-            <div style={{position:'relative',height:'550px'}}>
+        <div className='Creativity_whiteOut'>
+            <div className='Creativity_whiteIntop'></div>
+            <div className='Creativity_Height'>
                 <div className='swipe'>
                     <div className='imageswhite'>
 
@@ -52,7 +52,7 @@ function Creativity() {
                     </div>
                 </div>
             </div>
-            <div style={{width:'100vw',height:'80px',position:'absolute',bottom:'0',backgroundColor:'white',borderTopLeftRadius:'100%',borderTopRightRadius:'100%',zIndex:'6'}}></div>
+            <div className='Creativity_whiteInbottom'></div>
         </div>
     </div>
     )

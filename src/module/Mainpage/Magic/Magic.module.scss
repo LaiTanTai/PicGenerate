@@ -13,3 +13,31 @@
     font-weight: 400;
     margin-bottom: 10px;
 }
+.Magic_Text{
+    width: 50%;
+}
+.Magic_Image{
+    width: 50%;
+}
+@media screen and (max-width:1000px) {
+    .Magic{
+        display: block;
+        text-align: center;
+        padding: 50px 50px 50px 50px;
+    }
+    .Magic_text_h1{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .Magic_text_p1{
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+    .Magic_Text{
+        width: 100%;
+    }
+    .Magic_Image{
+        width: 100%;
+    }
+}

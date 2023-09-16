@@ -13,6 +13,12 @@
     font-weight: 400;
     margin-bottom: 10px;
 }
+.Showcase_Text{
+    width: 50%;
+}
+.Showcase_Image{
+    width: 50%;
+}
 .Showcase_button{
     margin-top: 50px;
     display: flex;
@@ -29,4 +35,29 @@
 }
 .Showcase_button:hover{
     background-color:rgb(14, 75, 155) ;
+}
+@media screen and (max-width:1000px){
+    .Showcase{
+        display: block;
+        text-align: center;
+        padding: 50px 50px 50px 50px;
+    }
+    .Showcase_button{
+        display: none;
+    }
+    .Showcase_Text{
+        width: 100%;
+    }
+    .Showcase_Image{
+        width: 100%;
+    }
+    .Showcase_text_h1{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .Showcase_text_p1{
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
 }
