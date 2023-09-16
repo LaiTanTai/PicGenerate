@@ -29,7 +29,7 @@ function Register() {
       <img className={styles.Register_image} src='./img/img_hero_section_3_2.jpg'/>
       <div className={styles.Register_Box}>
         <div className={styles.Register_BoxInside}>
-          <h1>Register</h1>
+          <h1 className={styles.Register_BoxH1}>Register</h1>
           <hr/>
           <div style={{textAlign:'start',marginLeft:'20px'}}>
             <p style={{fontWeight:'700'}}>Username</p>
@@ -37,7 +37,7 @@ function Register() {
             <p style={{fontWeight:'700'}}>Password</p>
             <input onChange={handlePassword} className={styles.Register_input} placeholder='Password'/>
           </div>
-          <button onClick={handleSubmit} disabled={valueButton} style={{width:'90%',height:'50px',marginTop:'30px',borderRadius:'10px',border:'0',backgroundColor:'#6c79f1',fontWeight:'700'}}>Register</button>
+          <button onClick={handleSubmit} disabled={valueButton} className={styles.Register_Button}>Register</button>
         </div>
       </div>
     </div>
