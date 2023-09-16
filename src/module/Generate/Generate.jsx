@@ -53,14 +53,7 @@ function Generate() {
                 Describe your creation in detail
               </p>
               <textarea
-                style={{
-                  border: 'none',
-                  outline: 'none', // Loại bỏ border mặc định
-                  boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)', // Tạo border mờ
-                  padding: '10px',
-                  resize: 'none',
-                  width:'95%', // Thêm padding cho phần nội dung
-                }}
+                className={styles.Generate_textarea}
                 placeholder="A white bird flying over a volcano"
                 onChange={handleChange}
                 rows={8}

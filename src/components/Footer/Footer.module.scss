@@ -4,15 +4,29 @@
     justify-content: space-around;
     padding: 50px 200px 30px 200px;
 }
+.Footer2{
+    display: none;
+}
 .Footer_contact{
     color: white;
     display: flex;
     justify-content: space-evenly;
 }
 .Footer_contact_ul{
+    color: white;
     text-decoration: none;
     list-style: none;
 }
 .Footer_contact_li{
     margin: 30px 20px 30px 0px;
+}
+@media screen and (max-width:750px){
+    .Footer{
+        display: none;
+    }
+    .Footer2{
+        display: block;
+        background-color: rgb(4 11 53);
+    justify-content: space-around;
+    }
 }

@@ -6,6 +6,15 @@
     background-color: rgb(4 11 53);
     z-index: 10;
 }
+.HeaderMain1{
+    display: block;
+    position: fixed;
+    width:100%;
+    z-index: 10;
+}
+.HeaderMain2{
+    display: none;
+}
 .generate{
     display: flex;
     align-items: center;
@@ -80,4 +89,15 @@
     border: 0;
     background-color: #6c79f1;
     cursor: pointer;
+}
+@media screen and (max-width:730px) {
+    .HeaderMain1{
+        display: none;
+    }
+    .HeaderMain2{
+        display: block;
+        position: fixed;
+        width:100%;
+        z-index: 10;
+    }
 }

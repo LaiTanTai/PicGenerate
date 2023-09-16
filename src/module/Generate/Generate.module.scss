@@ -76,6 +76,77 @@
     background-color: rgb(233 237 243);
     height: 100vh;
 }
+.Generate_textarea{
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    resize:none;
+    width:95%;
+}
 .Generate_history_image{
     width: 100%;
+}
+@media screen and (max-width:1000px) {
+    .Generate_history{
+        display: none;
+    }
+    .Generate_left_title{
+        display: flex;
+        padding-bottom: 2px;
+        font-size: 15px;
+    }
+    .Generate_textarea{
+        border: none;
+        outline: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        padding: 5px;
+        resize:none;
+        width:97%;
+        height: 100px;
+    }
+    .Generate{
+        position: relative;
+        padding-top: 95px;
+        padding-left: 100px;
+        padding-right: 100px;
+        display: block;
+    }
+    .Generate_left{
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 280px;
+        padding: 10px;
+        z-index: 10;
+        background-color: #e9edf3;
+    }
+    .Generate_left_buttongen{
+        background-color:rgb(25 119 242);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:21px;
+        color:white;
+        font-weight:600;
+        border:0;
+        width:100%;
+        height:50px;
+        border-radius:20px;
+        cursor:pointer;
+    }
+    .Generate_right{
+        display: flex;
+        width: 100%;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-bottom: 300px;
+    }
+    .Generate_left_div{
+        padding: 10px 5px 10px 5px;
+    }
 }
