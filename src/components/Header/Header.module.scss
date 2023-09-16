@@ -29,3 +29,16 @@
     border-radius: 30px;
     font-weight: 700;
 }
+@media screen and (max-width:580px) {
+    .SignUp{
+        background-image: linear-gradient(to bottom , #6c79f1,#f30b92);
+        margin-left:auto;
+        border:0px;
+        width:120px;
+        height:35px;
+        font-size: 13px;
+        color: white;
+        border-radius: 30px;
+        font-weight: 700;
+    }
+}
