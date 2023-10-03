@@ -2,9 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 export const GetUser = async (user)=>{
     try{
-        const data = await axios.get('https://64f1fb2d0e1e60602d2484c0.mockapi.io/PicGenerate')
-        const FindUser = data.data.find((value)=>value.username === user.username && value.password === user.password)
-        return FindUser
+        const data = await axios.post('http://localhost:8080/login',user)
+        console.log(data.data.data.urls)
+        return data.data.data
     }catch(err){
         console.log(err)
     }

@@ -1,9 +1,11 @@
 import React,{useEffect, useState} from 'react'
 import styles from './Explore.module.scss'
-import { getAllImage } from '../../api/MockAPI'
+import { getAllImage } from '../../api/ImageAPI'
+import { GetAllUser } from '../../api/UserApi'
 function Explore() {
   const [Post,setPost]= useState(true)
   const [User,setUser] = useState(false)
+  const [allImage,setAllImage] = useState([])
   const [allUser,setAllUser] = useState([])
   const [menu,setMenu] = useState(1)
   const [usermenu,setUsermenu] = useState(1)
@@ -12,18 +14,10 @@ function Explore() {
     setUser(false)
   }
   const handleImageMenu = ()=>{
-    const arrLength = allUser.map((value)=>{
-      
-      return (
-        value.images.length
-      )
-    })
-    
-    let count = 0 ;
-    for(let i = 0 ; i < arrLength.length ;i++){
-      count = count + arrLength[i]
-    }
+    const count = allImage.length
+    console.log(count)
     const num = Math.floor(count/6)
+    console.log(num)
     let numArray = [];
     for(let i = 0 ; i <= num;i++){
       numArray.push(i+1)
@@ -38,11 +32,9 @@ function Explore() {
   }
   const handleImageNav = ()=>{
     let ImageArray = []
-    allUser.map((value)=>{
-      value.images.map((image)=>{
-        ImageArray = [...ImageArray,image]
+    allImage.map((value)=>{
+        ImageArray = [...ImageArray,value]
       })
-    })
     return (
       ImageArray.map((value,index)=>{
         if(index>=(menu-1)*6 && index<=6*menu - 1){
@@ -74,9 +66,15 @@ function Explore() {
   useEffect(()=>{
     const fetchData = async ()=>{
       const data = await getAllImage()
-      setAllUser(data.data)
+      setAllImage(data)
     }
     fetchData();
+    const fetchUser = async ()=>{
+      const data = await GetAllUser();
+      console.log(data)
+      setAllUser(data);
+    }
+    fetchUser();
   },[])
   return (
     <div className={styles.Explore}>
@@ -107,16 +105,13 @@ function Explore() {
                             <h2 style={{marginLeft:'10px',fontWeight:'500',fontSize:'20px'}}>{value.username}</h2>
                         </div>
                         <div style={{width:'100%'}}>
-                          {value.images[0] ? value.images.map((image,index)=>{
-                              if(index < 3){
-                                return(
-                                  <img src={image} style={{width:'150px'}}/>
-                                )
+                          {
+                            value.url.map((image,indexin)=>{
+                              if(indexin<3){
+                                return <img src={image} style={{width:'150px'}}/>
                               }
-                          })
-                          :
-                          <h3>Images aren't available</h3>
-                          }
+                            })
+                          } 
                         </div>
                   </div>
                 }

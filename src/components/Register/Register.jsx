@@ -18,8 +18,6 @@ function Register() {
     const user = {
       username:Username,
       password:Password,
-      images:[],
-      avatar:"",
     }
     await PostUser(user)
     navigate('/')

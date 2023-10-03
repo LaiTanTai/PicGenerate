@@ -7,7 +7,7 @@ function Creation() {
     <div className={styles.Creation}>
       <h1 className={styles.Creation_h1}>My Creations</h1>
       {
-        user.images.map((value)=>{
+        user.urls.map((value)=>{
           return (<img src={value} style={{width:'400px',margin:'1px 1px 1px 1px'}}/>)
         })
       }

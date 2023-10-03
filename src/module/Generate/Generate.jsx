@@ -17,6 +17,7 @@ function Generate() {
   const handleChange = (event)=>{
     setTextImage(event.target.value)
   }
+  
   const generateImage = async () => {
     setIsLoading(true)
     try {
@@ -79,9 +80,11 @@ function Generate() {
       }
       <div className={styles.Generate_history}>
           {
-            user.images.map((image,index)=>{
-              if(index <= 6){
-                return <img src={image} className={styles.Generate_history_image}/>
+            user.urls.map((value,index)=>{
+              if(index<7){
+                return (
+                <img src={value} className={styles.Generate_history_image}/>
+              )
               }
             })
           }

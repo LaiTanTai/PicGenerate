@@ -33,6 +33,7 @@ function Boxup() {
         password : password,
       }
       const data = await GetUser(User)
+      console.log(data)
       if(data){
         dispatch(signin(data))
         navigate('/generate')
